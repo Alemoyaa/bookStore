@@ -1,6 +1,6 @@
 <section class="row mt-5">
     <div class="col">
-        <button class="btn btn-primary float-right mb-3" data-toggle="modal" data-target="#modalBook">New Book</button>
+        <button class="btn btn-danger float-right mb-3" data-toggle="modal" data-target="#modalBook">New Book</button>
         <table class="table table-hover">
             <thead>
                 <tr>
@@ -26,22 +26,22 @@
                     </td>
 
                     <td *ngIf="book.userUid === userUid || isAdmin == true; else noOwner">
-                        <button class="btn btn-primary" data-toggle="modal" data-target="#modalBook"
+                        <button class="btn btn-danger" data-toggle="modal" data-target="#modalBook"
                         (click)="onPreUpdateBook(book)">Update</button>
                     </td>
                     <ng-template #noOwner>
                         <td>
-                            <button class="btn btn-secondary" data-toggle="modal" data-target="#modalBook"
+                            <button class="btn btn-danger" data-toggle="modal" data-target="#modalBook"
                             disabled="true" >Update</button>
                         </td>   
                     </ng-template>
                         
                     <td *ngIf="isAdmin === true; else noAdmin">
-                        <button class="btn btn-danger" (click)="onDeleteBook(book.id)">Delete</button>
+                        <button class="btn btn-warning" (click)="onDeleteBook(book.id)">Delete</button>
                     </td>
                     <ng-template #noAdmin>
                         <td>
-                            <button class="btn btn-secondary" disabled="true">Delete</button>
+                            <button class="btn btn-warning" disabled="true">Delete</button>
                         </td>
                     </ng-template>
                 </tr>
