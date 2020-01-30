@@ -47,7 +47,7 @@
     border-color: #ff0059cc;
     border: 2px solid #ff0059cc;
   } 
-  .btn-danger:hover, .btn-danger:active, .btn-danger:visited {
+  .btn-danger:hover, .btn-danger:active {
     background-color: #8400ff;
     border-color: #8400ffdf;
     border: 2px solid #8400ffdf;
